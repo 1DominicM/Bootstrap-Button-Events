@@ -4,11 +4,11 @@
 // });
 
 let btnTwo = document.getElementById('rightClick');
-btnTwo.addEventListener('rightClick' , function(e){
+btnTwo.addEventListener('contextmenu' , function(e){
     e.target.style.background = "#a0b96b";
 });
 
 let btnThree = document.getElementById('mousePointer');
-btnThree.addEventListener('mousePointer' , function(ev){
+btnThree.addEventListener('mouseenter' , function(ev){
     ev.target.style.background = "#69fffc";
 });
