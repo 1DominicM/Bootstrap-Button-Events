@@ -3,26 +3,28 @@
 
 // Key Down
 let inputOne = document.getElementById('inputOne');
-inputOne.addEventListener('keydown', function(e){
-    e.preventDefault()
-    inputOne.value = e.code;
+inputOne.addEventListener('keydown', function(eventtttt){
+    eventtttt.preventDefault()
+    eventtttt.target.style.background = "red";
 });
 
 // Key up
-let inputTwo = document.getElementById('inputTwo', function(e){
-    e.preventDefault()
-    inputTwo.value = e.code;
+let inputTwo = document.getElementById('inputTwo');
+inputTwo.addEventListener('keyup', function(eventttt){
+    eventttt.preventDefault()
+    eventttt.target.style.background = "green";
 });
 
+// Key Press
 let inputThree = document.getElementById('inputThree');
-    inputOne.addEventListener('keypress', function(){
-    var randomHex = Math.floor(Math.random()*16777215).toString(16);
-    inputThree.style.backgroundColor = '#' + randomHex;
+inputThree.addEventListener('keypress', function(eventtt){
+    eventtt.preventDefault()
+    eventtt.target.style.background = "purple";
 });
 
+// Alt Key
 let inputFour = document.getElementById('inputFour');
-    inputFour.addEventListener('keydown', function(e){
-    if (e.ctrlKey && e.altKey){
-        console.log('both');
-    }
+inputFour.addEventListener('keydown', function(eventt){
+    if(eventt.shiftKey)
+    eventt.target.style.background = "blue";
 });
